@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/animate.css">
+  
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  
+  <link rel="stylesheet" href="./css/flaticon.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <link rel="stylesheet" href="./module/style.css">
+  <link rel="stylesheet" href="./module/modal.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Problem Solving Involving Sides And Angles of Polygons</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+    
+     
+     
+    .module1pt2-section{
+      background-color: #fff; /* here */
+      margin: auto;
+    }
+    .module1pt3-section{
+      background-color: #fff;;
+      margin: auto;
+    }
+
+
+           .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #12c2b9;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #12c2b9;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+    
+    .w-col{
+      color: black ;
+    }
+
+    .scrolldrag
+    {
+      border-radius: 0.2rem;
+      box-shadow: 0 8px 16px 0 rgba(102, 100, 100, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .scrolldrag {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Optional: Add box shadow for a subtle effect */
+  
+}
+
+/* Hover effect */
+.scrolldrag:hover {
+	transition: ease-in-out .1s;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+  color: black; 
+}
+
+.scrolldrag:active {
+  background-color:  rgba(0, 0, 0, 0.5); /* Change to a darker color when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+
+}
+
+.column{
+  width: 40%; background-color: #bebdbd; border-radius: 1em;display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+}
+
+.cright{
+  margin-left: 100px
+}
+@media (max-width: 991.98px)  {
+  .column{
+   width: 90%; 
+   margin-bottom: 10px;
+  }
+  .cright{
+    margin-left: 10px
+  }
+}
+
+
+
+.words{
+  color: #0d0d0d;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 250;
+}
+
+
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" style="color: #fff;" href="./index.html"><i class=" fa-solid fa-book " style="color: #12c2b9;"></i>Polygon-Edu<span style="color: #12c2b9;">Reading Module</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" >
+				<span class="oi oi-menu" style="color: #12c2b9;">Menu</span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto" >
+					<li class="nav-item "><a href="index.html" class="nav-link" style="color: #12c2b9;">Home</a></li>
+          <li class="nav-item "><a href="mod1.html" class="nav-link" style="color: #12c2b9;">Module</a></li>
+          <li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+				</ul>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('./images/polfun2bakground.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+             <p class="breadcrumbs"><span class="mr-2"><a href="./mod1.html" style="color: #12c2b9;">Module <i class="fa fa-chevron-right" style="color: #cacaca;"></i></a></span><span>Module 1 <i class="fa fa-chevron-right"></i></span></p>
+             <h1 class="mb-0 bread" >Sides And Angles of Polygons</h1>
+           </div>
+         </div>
+       </div>
+      </section>
+      
+  
+       
+
+
+
+       <section class="ftco-section module1pt2-section" >
+        <div class="container-fluid mx-3">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h1 style="font-weight: bold; font-family: cursive; color:  #12c2b9;" class="text-center ftco-animate">Polygons  </h1><hr>
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Polygon</h1><hr>
+    
+    <p class="words ftco-animate">A polygon is a two-dimensional closed shape bounded with straight sides1234. It does not have curved sides. The sides of a polygon are also called its edges1. The sides of a polygon are made of straight line segments connected to each other end to end2. A polygon is a closed two-dimensional figure, which is made up of straight lines3. Examples of polygons include triangles, squares, and pentagons</p>
+    <br>
+    <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Identify some triangles and quadrilaterals</h1><hr>
+    <p class="words ftco-animate">can you identify some triangles and quadrilaterals from places you frequently visit?what about trianglesand quadrilateralsthat you see in school, in malls, and in your own home </p>
+              
+
+<br>
+<p class="words ftco-animate">There are two main components, namely: </p>
+<p class="words ftco-animate">•Triangles </p>
+<p class="words ftco-animate">•	quadrilaterals</p>
+<p class="words ftco-animate"> Enumerate the sides, angles, and vertices</p>
+<br>
+<h3 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Try to understand this figure:</h3><hr>
+<br>
+<img src="images/tri.png" alt="">
+</div>
+<br>
+<div class="row mt-4 ftco-animate">
+  <a style="width: 80%; background-color: #12c2b9;" href="#ecosystem-details" aria-expanded="true"  data-toggle="collapse" class="mx-auto scrolldrag text-center" aria-controls="ecosystem-details" >
+      <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col"  >Triangles</h1> 
+  </a>
+</div>
+<div class="row mt-4">
+      <div class="column cright  text-lg-left collapse"  id="ecosystem-details" aria-expanded="true">
+        <div class="mx-5 mt-3"><h2 class="words">Triangle can be classified according to its sides</h2> <hr>
+          
+          <p class="words">No two of the sides are congruent</p><hr>
+          <p class="words">At least two of the three sides are congruent</p><hr>
+          <p class="words">All the three sides are congruent</p><hr></div>
+          
+      </div>
+  <div class="column  text-lg-left  collapse" style="margin-left: 10px" aria-expanded="true" id="ecosystem-details">
+      <div class="ml-5 mt-3"><h2 class="words">Triangles are also classified according to thier angles</h2> <hr>
+        <p class="words">A triangle is acute if all its angles are acute</p> <hr>
+        <p class="words">A triangle is right if it has right angle</p> <hr>
+        <p class="words">A triangle is obtuse if it has obtuse angle</p> <hr>
+        <p class="words">A triangle is equiangular if all the three angles are congruent</p></div>
+  </div>
+</div>
+
+<br>
+
+
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+      <section class="ftco-section module1pt3-section" >
+        <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Types Of Triangles</h1><hr>
+<p class="words ftco-animate">You have to know that there are different type osf triangles base on the size of their sides and you have to calculate to find the size and angle in order to clasify the triangle  <br> There are three types of triangles:</p>
+
+<ul class="ml-3 ">
+  <li ><a href="#Tmodal" data-toggle="modal" data-target="#Tmodal" class="ftco-animate" style="color: #12c2b9;" >Types of Triangles</a></li>
+
+  <!--------------------------------------------------- MODAL 1------------------------------------- -->
+<div class="modal fade" id="Tmodal" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content mx-auto">
+      <div class="modal-header">
+        <!-- MODAL 1 HEADER -->
+        <h5 class="modal-title " >
+          Types of Triangles
+      </h5>
+      <button type="button" class="close colose" data-dismiss="modal" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+    </div>
+
+    
+      <div class="modal-body ">
+        <!-------------------------------- MODAL 1 BODY -------------------------- -->
+        <h6 class="mx-3 mt-4" >
+          Triangles, fundamental geometric shapes, are categorized by side lengths and angles. Equilateral triangles have equal sides; isosceles have two equal sides; scalene have none. Based on angles, they can be acute, right, or obtuse, defining their unique properties and applications:
+        </h6> <hr>
+
+
+        <!--------------------------------- Carousel----------------------- -->
+       <div class="carousel slide" id="carouselindicators" data-ride="carousel" data-slide="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselindicators" data-slide-to="'0" class="active"></li>
+          <li data-target="#carouselindicators" data-slide-to="'1"></li>
+          <li data-target="#carouselindicators" data-slide-to="'2"></li>
+          <li data-target="#carouselindicators" data-slide-to="'3"></li>
+        </ol>
+        <!--------------------------- CAROUSEL CONTENT---------------- -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="ml-4 modal-part">1. Scalene Triangle</h3>
+            <div class="row mx-4">
+              
+              <img class="img-size" src="./real-images/Scalene-Triangle.png" alt="First Slide">
+              <div class="col-sm my-3 mt-3"><p>A scalene triangle is a type of triangle where all three sides and all three angles are of different lengths and degrees, respectively. This distinct lack of symmetry differentiates it from equilateral and isosceles triangles.</p></div>
+            </div>
+          </div>
+
+          <!-- 2nd content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">2. Isosceles</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/iscoseles.jpg" alt="Second Slide">
+              <div class="col-sm my-3 mt-3"><p>An isosceles triangle is a triangle with at least two sides of equal length, resulting in two equal angles opposite those sides. This symmetry distinguishes it from scalene triangles, which have no equal sides, and equilateral triangles, with all sides equal.</p></div>
+            </div>
+          </div>
+
+          <!-- 3rd Content -->
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">3. Equilateral Triangle</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/equilateral-triangle.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>An equilateral triangle is a triangle with all three sides of equal length and all three internal angles measuring 60 degrees each. This uniformity gives it perfect symmetry, distinguishing it from isosceles and scalene triangles, which lack such equal proportions.
+              </p></div>
+            </div>
+          </div>
+        </div> 
+        <!-- Carousel control -->
+        <a
+        class='carousel-control-prev'
+        href='#carouselindicators'
+        role='button'
+        data-slide='prev'
+        >
+       <span class="carousel-control-prev-icon"
+             aria-hidden='true'
+             ></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a
+     class='carousel-control-next'
+     href='#carouselindicators'
+     role='button'
+     data-slide='next'
+     >
+    <span
+          class='carousel-control-next-icon'
+          aria-hidden='true'
+          ></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+       </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modal-part" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--------------------- MODAL 2 --------------------- -->
+<li><a href="#Amodal" data-toggle="modal" data-target="#Amodal" class="ftco-animate " style="width: 80%; color: #12c2b9;">Sample Problem</a></li>
+  <div class="modal fade" id="Amodal" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content mx-auto">
+        <div class="modal-header">
+          <!-- MODAL 1 HEADER -->
+          <h5 class="modal-title ">
+            Sample Problem
+        </h5>
+        <button type="button" class="close colose" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+  
+      </div> <!--End HEader-->
+
+      <div class="modal-body">
+        <h6 class="ml-3 mt-3">Let us continue focussing on the angles of a triangle</h6><hr>
+      
+
+      <!-- CAROUSEL -->
+
+      <div class="carousel slide" id="carouselindicator" data-ride="carousel" data-slide="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselindicator" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselindicator" data-slide-to="1"></li>
+      
+
+        </ol>
+
+
+        <!-- 1st Content -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="ml-4 modal-part">1. Find m∠P in the following triangle <br></h3>
+            <div class="row mx-4">
+              
+              <img class="img-size" src="./real-images/sampleprob.png" alt="First Slide" style="height: 170px;">
+              <div class="col-sm my-3 mt-3"><p>Take note that the sum of the degree measure of a triangle is 180° <br> solution: <br>m∠P+m∠Q+m∠R= 180 <br>m∠P+80+50=180 <br>m∠P+130=180 <br>m∠P= 50</p></div>
+            </div>
+          </div>
+
+          <!-- 2nd content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">2. Find x in the following triangle</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/sampleprob2.png" alt="Second Slide" style="height: 170px;">
+              <div class="col-sm my-3 mt-3"><p>Take note that the sum of the degree measure of a triangle is 180° <br> solution: <br>m∠P+m∠Q+m∠R= 180 <br>4x-12+2x-6+x+2=180 <br>7x-16=180 <br>7x= 196<br>x= 28</p></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">3. ⊿PQR is a right triangle with ∠Q as the right angle. The measure of ∠P twice the measure of ∠R. Find the measure of ∠P.</h3>
+              <div class="col-sm my-3 mt-3"><p>Take note that the sum of the degree measure of a triangle is 180° <br> solution: <br>m∠Q=90. Let m∠R=x. Therefore, m∠P=2x <br>m∠P+m∠Q+m∠R= 180 <br>2x+90+x=180 <br>3x=90<br>7x= 196<br>x= 30, <br>  m∠P=2(30) =60 </p></div>
+            </div>
+          </div>
+          <a
+          class='carousel-control-prev'
+          href='#carouselindicator'
+          role='button'
+          data-slide='prev'
+          >
+         <span class="carousel-control-prev-icon"
+               aria-hidden='true'
+               ></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a
+       class='carousel-control-next'
+       href='#carouselindicator'
+       role='button'
+       data-slide='next'
+       >
+      <span
+            class='carousel-control-next-icon'
+            aria-hidden='true'
+            ></span>
+      <span class="sr-only">Next</span>
+    </a>
+  
+         </div>
+  
+  
+        </div>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default modal-part" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+      </div>
+      </div>
+</ul>
+
+
+
+
+<form action="./mod2.html">
+  <p class="words ftco-animate">Now that you understand the types of triangles and In conclusion, understanding the different types of triangles—equilateral, isosceles, and scalene, as well as their angle classifications—provides a foundation for more advanced geometric concepts. Recognizing these distinctions enhances problem-solving skills and offers valuable insights into the properties and applications of various triangles in mathematics.</p>
+  <button onclick="markButton1Clicked()" style="background-color: #12c2b9;"class="ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">Next>> Module 2</button>
+</form>
+
+<div>
+  <br>
+<form action="index.html#Assessment ">
+  <button onclick="markButton1Clicked()" style="background-color: #12c2b9;"class="ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">Go to>> Assessment</button>
+</form>
+</div>
+
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+
+      <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                            <div class="text">
+                                <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text">
+                                
+                                <p>+63 00000000</p>
+                                <p>pogi.freelance@gmail.com</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                    <div class="copyright"><a href="#">darcodemaster</a> &copy; 2019 All Right Reserved</div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+  
+  
+
+    
+    
+    <script src="./script.js"></script>
+    <script src="./module/level.js"></script>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+			<script src="./js/jquery.min.js"></script>
+			<script src="./js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="./js/popper.min.js"></script>
+			<script src="./js/bootstrap.min.js"></script>
+			<script src="./js/jquery.easing.1.3.js"></script>
+			<script src="./js/jquery.waypoints.min.js"></script>
+			<script src="./js/jquery.stellar.min.js"></script>
+			<script src="./js/owl.carousel.min.js"></script>
+			<script src="./js/jquery.magnific-popup.min.js"></script>
+			<script src="./js/jquery.animateNumber.min.js"></script>
+			<script src="./js/scrollax.min.js"></script>
+			<script src="./drag-and-drop.js"></script>
+
+      <script>
+        // Function to toggle dark mode styles
+        function toggleDarkMode() {
+        
+        
+          var section = document.querySelector('.module1pt2-section');
+          var section2 = document.querySelector('.module1pt3-section');
+          var fontcol = document.querySelectorAll('.w-col');
+          var modalTitle = document.querySelectorAll('.modal-title');
+          var modalPart = document.querySelectorAll('.modal-part');
+          var modalContent = document.querySelectorAll('.modal-content');
+          var modalBody = document.querySelectorAll('.modal-body');
+          var close = document.querySelectorAll('.colose');
+          var word = document.querySelectorAll('.words');
+          
+        
+  
+  
+          // Toggle dark mode based on the active class of the toggle button
+          if (darkModeToggle.classList.contains('active')) {
+            // Dark mode is active: apply styles for dark mode
+            
+            
+        
+            section.style.backgroundColor = '#0d0d0d';
+            section2.style.backgroundColor = '#0d0d0d';
+            
+            word.forEach(function(sen) {
+              sen.style.color = '#fff';
+            });
+
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '#0d0d0d';
+              exit.style.color = '#fff';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '#0d0d0d';
+              title.style.color = '#fff';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '#0d0d0d';
+              content.style.color = '#fff';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '#0d0d0d';
+              body.style.color = '#fff';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '#0d0d0d';
+              part.style.color = '#fff';
+            });
+
+            fontcol.forEach(function(Color) {
+              Color.style.color = '#fff';
+            });
+           
+
+           
+            
+        
+      
+
+          } else {
+            // Dark mode is inactive: revert styles to default
+         
+            
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '#E4C59E';
+              exit.style.color = '#0d0d0d';
+            });
+
+            word.forEach(function(sen) {
+              sen.style.color = '';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '';
+              title.style.color = '#0d0d0d';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '';
+              content.style.color = '#0d0d0d';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '';
+              body.style.color = '#0d0d0d';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '';
+              part.style.color = '#0d0d0d';
+            });
+
+
+            section.style.backgroundColor = '';
+            section2.style.backgroundColor = '';
+            fontcol.forEach(function(Color) {
+              Color.style.color = 'black';
+            });
+            
+
+          }
+        }
+  
+        var darkModeToggle = document.getElementById('dark-change');
+         // Event listener for dark mode toggl
+         darkModeToggle.addEventListener('click', function() {
+
+            darkModeToggle.classList.toggle('active');
+            var isDark = darkModeToggle.classList.contains('active');
+            localStorage.setItem('isDark', isDark);
+            toggleDarkMode();
+
+        });
+
+        // On page load, check local storage for dark mode preference
+        document.addEventListener('DOMContentLoaded', function() {
+            var isDark = localStorage.getItem('isDark') === 'true';
+            if (isDark) {
+                darkModeToggle.classList.add('active');
+                
+            }
+            toggleDarkMode(); 
+        });
+  
+  
+        </script>
+
+<script>
+  // Function to mark button1 as clicked in localStorage
+  function markButton1Clicked() {
+      let DataisThere2 = localStorage.getItem('button2Enabled');
+      let DataisThere3 = localStorage.getItem('button3Enabled');
+      if(!DataisThere2 && !DataisThere3){
+          localStorage.setItem('modcheck1', true);
+      }
+  }
+</script>
+
+			<script src="./js/main.js"></script>
+</body>
+</html>

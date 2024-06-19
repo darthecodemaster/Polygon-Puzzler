@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/animate.css">
+  
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  
+  <link rel="stylesheet" href="./css/flaticon.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <link rel="stylesheet" href="./module/style.css">
+  <link rel="stylesheet" href="./module/modal.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Geometry Essentials - Understanding Quadrilaterals</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+    
+     
+     
+    .module1pt2-section{
+      background-color: #fff; /* here */
+      margin: auto;
+    }
+    .module1pt3-section{
+      background-color: #fff;;
+      margin: auto;
+    }
+
+
+           .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          label{
+		position: absolute;
+		width: 45px;
+		height: 25px;
+		
+		border: 2px solid;
+		border-radius: 20px;
+		border-color: #12c2b9;
+	  }
+
+	  label::before{
+		position: absolute;
+		content: "";
+		width: 18px;
+		height: 18px;
+		left: 1px;
+		top: 1px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #12c2b9;
+		border-radius: 20px;
+		transition: 0.4s;
+	  }
+
+	  label.active:before{
+		left: 22px;
+	  }
+    
+    .w-col{
+      color: black ;
+    }
+
+    .scrolldrag
+    {
+      border-radius: 0.2rem;
+      box-shadow: 0 8px 16px 0 rgba(102, 100, 100, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .scrolldrag {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Optional: Add box shadow for a subtle effect */
+  
+}
+
+/* Hover effect */
+.scrolldrag:hover {
+	transition: ease-in-out .1s;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);/* Darken the background color on hover */
+  color: black; 
+}
+
+.scrolldrag:active {
+  background-color:  rgba(0, 0, 0, 0.5); /* Change to a darker color when button is pressed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give a pressed effect */
+
+}
+
+.column{
+  width: 40%; background-color: #bebdbd; border-radius: 1em;display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+}
+
+.cright{
+  margin-left: 100px
+}
+@media (max-width: 991.98px)  {
+  .column{
+   width: 90%; 
+   margin-bottom: 10px;
+  }
+  .cright{
+    margin-left: 10px
+  }
+}
+
+
+
+.words{
+  color: #0d0d0d;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 250;
+}
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="./index.html" style="color: #fff;"><i class=" fa-solid fa-book" style="color: #12c2b9;"></i>Polygon-Edu<span style="color: #12c2b9;">Reading Module</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu" style="color: #12c2b9;">Menu</span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="index.html" class="nav-link" style="color: #12c2b9;">Home</a></li>
+          <li class="nav-item "><a href="mod2.html" class="nav-link" style="color: #12c2b9;">Module</a></li>
+          <li class="nav-item"><a class="nav-link"><label id="dark-change" ></label></a></li>
+					<li class="nav-item"><a class="nav-link"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('./images/polmas.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+             <p class="breadcrumbs"><span class="mr-2"><a href="./mod1.html" style="color: #12c2b9;">Module 1 <i class="fa fa-chevron-right" style="color: #cacaca;"></i></a></span><span>Module 2 <i class="fa fa-chevron-right"></i></span></p>
+             <h1 class="mb-0 bread"> Understanding Quadrilaterals</h1>
+           </div>
+         </div>
+       </div>
+      </section>
+      
+  
+       
+
+
+
+       <section class="ftco-section module1pt2-section" >
+        <div class="container-fluid mx-3">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h1 style="font-weight: bold; font-family: cursive; color:  #12c2b9;" class="text-center ftco-animate">Quadrilaterals  </h1><hr>
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Understanding Quadrilaterals</h1><hr>
+    
+    <p class="words ftco-animate">Welcome to the module on quadrilaterals! In this module, you will learn about different types of quadrilaterals, their properties, and how to solve problems involving them. Quadrilaterals are four-sided polygons, and they come in various shapes and sizes. By the end of this module, you'll be able to identify and classify quadrilaterals, understand their properties, and solve basic problems related to them. <br><br><span style="font-size: 20px; font-weight: 700;">Objectives</span><br>
+      Define and identify quadrilaterals. <br>
+      Classify quadrilaterals based on their properties. <br>
+      Understand the properties of special quadrilaterals: parallelograms, rectangles, squares, rhombuses, and trapezoids. <br>
+      Solve problems involving the properties of quadrilaterals.</p>
+    <br>
+    <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Introduction to Quadrilaterals</h1><hr>
+    <p class="words ftco-animate">A quadrilateral is a polygon with four sides (edges) and four vertices (corners). The sum of the interior angles of any quadrilateral is always 360 degrees.</p>
+      <br>
+      <div class="container center">
+        <div class="center" style="display: flex; justify-content: center; align-items: center;">
+          <img src="/images/figure.png" alt="" style="height: 180px; width: 360px;">
+          <br>
+          <p class="words ftco-animate">The figure show quadrilateral PQRS or ▭PQRS Quadrilaterals are name using the four vertices consecutively. The other names for ▭PQRS are as follows: <br> ▭QRSP, ▭RSPQ, ▭SPQR, ▭PSRQ <br>▭SRQP, ▭RQPS, and ▭QPSR <br> <br> The sides of ▭PQRS are PQ, QR, RS, and SP, Its vertices are P, Q, R and S and its angles are ∠P, ∠Q, ∠R, and ∠S. The diagonals are PR and QS</p>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h1>Quck Check</h1>
+        <br>
+        <p class="words ftco-animate">Given: ▭FAIR, Answer the following: <br>a. Give the other possible names for the quadrilateral <br>b. Enumerate the sides, angles, and  vertices of the quadrilateral <br>c. Enumerate the pairs of consecutive sides, consecutive angles, and consecutive vertices
+        <br> d. Enumerate the pairs of non-consecutive sides, non-consecutive angles, and non-consecutive vertices</p>
+      </div>
+
+<br>
+</div>
+<br>
+<div class="row mt-4 ftco-animate">
+  <a style="width: 80%; background-color: #12c2b9;" href="#ecosystem-details" aria-expanded="true"  data-toggle="collapse" class="mx-auto scrolldrag text-center" aria-controls="ecosystem-details" >
+      <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col"  >Solving Problems Involving Quadrilaterals</h1> 
+  </a>
+</div>
+<div class="row mt-4">
+      <div class="column cright  text-lg-left collapse"  id="ecosystem-details" aria-expanded="true">
+        <div class="mx-5 mt-3"><h2 class="words">Example Problems</h2> <hr>
+          <p class="words">Given a quadrilateral with angles measuring 90°, 85°, and 95°,find fourth angle.</p><hr>
+          <p class="words">The sum of the interior angles of a quadrilateral is 360°.</p><hr>
+          <p class="words">Fourth angle=360°−(90°+85°+95°)=360°−270°=90°</p><hr>
+          <p class="words">Therefore, the fourth angle is 90°.</p><hr></div>
+          
+          
+      </div>
+  <div class="column  text-lg-left  collapse" style="margin-left: 10px" aria-expanded="true" id="ecosystem-details">
+      <div class="ml-5 mt-3"><h2 class="words">Example Problems</h2> <hr>
+        <p class="words">A rectangle has a length of 8 cm and a width of 6 cm. Find the length of the diagonals.</p> <hr>
+        <p class="words">The diagonals of a rectangle are equal in length and can be found using the Pythagorean theorem.</p> <hr>
+        <p class="words">Diagonal= square root of length² width²= √(8²+6²)= 10 cm</p>
+        <p class="words">Therefore, the length of each diagonal is 10 cm.</p></div>
+  </div>
+</div>
+
+<br>
+
+
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+      <section class="ftco-section module1pt3-section" >
+        <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="row mx-5">
+            <h1 class="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif w-col ftco-animate">Some quadrilateral are parallelogram</h1><hr>
+<p class="words ftco-animate">A parallelogram is a quadrilateral in which both pairs of opposite sides are parallel</p>
+
+<div class="container center">
+  <div class="center" style="display: flex; justify-content: center; align-items: center;">
+    <img src="/images/paralell.png" alt="" style="height: 180px; width: 360px;">
+    <br>
+    <p class="words ftco-animate">The figure show PE||AN and AP||EN . Therefore ▭PANE is a parallelogram. <br>These are three special parallelogram, namely the rectangle, rhombus, and square</p>
+  </div>
+</div>
+  <br> <br>
+<ul class="ml-3 ">
+  <li ><a href="#Tmodal" data-toggle="modal" data-target="#Tmodal" class="ftco-animate" style="color: #12c2b9;">Types of Parallelogram</a></li>
+
+  <!--------------------------------------------------- MODAL 1------------------------------------- -->
+<div class="modal fade" id="Tmodal" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content mx-auto">
+      <div class="modal-header">
+        <!-- MODAL 1 HEADER -->
+        <h5 class="modal-title " >
+          Types of Parallelogram
+      </h5>
+      <button type="button" class="close colose" data-dismiss="modal" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+    </div>
+
+    
+      <div class="modal-body ">
+        <!-------------------------------- MODAL 1 BODY -------------------------- -->
+        <h6 class="mx-3 mt-4" >
+          In this module, you've learned about the different types of quadrilaterals, their properties, and how to solve problems involving them. Understanding these fundamental shapes and their characteristics is essential in geometry. Keep practicing these concepts, and you'll be able to tackle more complex problems with confidence.
+        </h6> <hr>
+
+
+        <!--------------------------------- Carousel----------------------- -->
+       <div class="carousel slide" id="carouselindicators" data-ride="carousel" data-slide="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselindicators" data-slide-to="'0" class="active"></li>
+          <li data-target="#carouselindicators" data-slide-to="'1"></li>
+          <li data-target="#carouselindicators" data-slide-to="'2"></li>
+          <li data-target="#carouselindicators" data-slide-to="'3"></li>
+        </ol>
+        <!--------------------------- CAROUSEL CONTENT---------------- -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="ml-4 modal-part">1. Parallelogram</h3>
+            <div class="row mx-4">
+              
+              <img class="img-size" src="./real-images/parallelogram.jpg" alt="First Slide">
+              <div class="col-sm my-3 mt-3"><p> A quadrilateral with opposite sides parallel and equal in length. Examples: Rhombus, rectangle, and square.</p></div>
+            </div>
+          </div>
+
+          <!-- 2nd content -->
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">2.Rectangle</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/Rectangle.jpg" alt="Second Slide">
+              <div class="col-sm my-3 mt-3"><p>A parallelogram with four right angles. Properties: Opposite sides are equal and parallel, and diagonals are equal in length.</p></div>
+            </div>
+          </div>
+
+          <!-- 3rd Content -->
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">3. Square</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/Rhombus.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>A rectangle with all sides equal in length. Properties: All properties of a rectangle and a rhombus; four right angles and diagonals bisect each other at right angles.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">4. Rhombus</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/equilateral-triangle.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>A parallelogram with all four sides equal in length. Properties: Opposite angles are equal, diagonals bisect each other at right angles, and diagonals are not equal.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">5. Kite</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/kite.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>A quadrilateral with two pairs of adjacent sides equal. Properties: One pair of opposite angles is equal, and diagonals intersect at right angles with one diagonal bisected.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <h3 class="ml-4 modal-part">6. Trapezoid (or Trapezium):</h3>
+            <div class="row mx-4">
+              <img class="img-size" src="./real-images/trapiziod.jpg" alt="Third Slide">
+              <div class="col-sm my-3 mt-3"><p>Only one pair of opposite sides is parallel. Properties:Only one pair of opposite sides is parallel.
+                Non-parallel sides are called legs.
+              </p></div>
+            </div>
+          </div>
+        </div> 
+        <!-- Carousel control -->
+        <a
+        class='carousel-control-prev'
+        href='#carouselindicators'
+        role='button'
+        data-slide='prev'
+        >
+       <span class="carousel-control-prev-icon"
+             aria-hidden='true'
+             ></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a
+     class='carousel-control-next'
+     href='#carouselindicators'
+     role='button'
+     data-slide='next'
+     >
+    <span
+          class='carousel-control-next-icon'
+          aria-hidden='true'
+          ></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+       </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modal-part" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--------------------- MODAL 2 --------------------- -->
+</ul>
+
+
+<br> <br>
+
+<form action="./mod3.html">
+  <p class="words ftco-animate">Understanding the perimeter of various geometric figures is a fundamental aspect of geometry that has practical applications in real life, such as in construction, design, and many fields of science and engineering. We hope this module has provided you with a clear understanding and the necessary tools to calculate the perimeter of kites, triangles, and quadrilaterals with confidence. Happy calculating!</p>
+  <button onclick="markButton1Clicked()" style="background-color: #12c2b9;"class="ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">Next>> Module 3</button>
+</form>
+<div>
+  <br>
+<form action="./index.html#Assessment ">
+  <button onclick="markButton1Clicked()" style="background-color: #12c2b9;"class="ftco-animate btn scrolldrag py-3 px-4 d-md-1  mr-5">Go to>> Assessment</button>
+</form>
+</div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+
+      <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><h3 style="color: #fff;"><b>Disclaimer</b></h3></a></figure>
+                            <div class="text">
+                                <p>This learning material includes ideas, graphics, and pictures sourced from various individuals and organizations for educational purposes. Efforts have been made to ensure that proper credit is given to the original creators. The authors do not represent nor claim ownership over them.</p>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text">
+                                
+                                <p>+63 00000000</p>
+                                <p>pogi.freelance@gmail.com</p>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                    <div class="copyright"><a href="#">darcodemaster</a> &copy; 2019 All Right Reserved</div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://kit.fontawesome.com/a056a765ce.js" crossorigin="anonymous"></script> <!--fonts-->
+  
+  
+
+    
+    
+    <script src="./script.js"></script>
+    <script src="./module/level.js"></script>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+			<script src="./js/jquery.min.js"></script>
+			<script src="./js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="./js/popper.min.js"></script>
+			<script src="./js/bootstrap.min.js"></script>
+			<script src="./js/jquery.easing.1.3.js"></script>
+			<script src="./js/jquery.waypoints.min.js"></script>
+			<script src="./js/jquery.stellar.min.js"></script>
+			<script src="./js/owl.carousel.min.js"></script>
+			<script src="./js/jquery.magnific-popup.min.js"></script>
+			<script src="./js/jquery.animateNumber.min.js"></script>
+			<script src="./js/scrollax.min.js"></script>
+			<script src="./drag-and-drop.js"></script>
+
+      <script>
+        // Function to toggle dark mode styles
+        function toggleDarkMode() {
+        
+        
+          var section = document.querySelector('.module1pt2-section');
+          var section2 = document.querySelector('.module1pt3-section');
+          var fontcol = document.querySelectorAll('.w-col');
+          var modalTitle = document.querySelectorAll('.modal-title');
+          var modalPart = document.querySelectorAll('.modal-part');
+          var modalContent = document.querySelectorAll('.modal-content');
+          var modalBody = document.querySelectorAll('.modal-body');
+          var close = document.querySelectorAll('.colose');
+          var word = document.querySelectorAll('.words');
+          
+        
+  
+  
+          // Toggle dark mode based on the active class of the toggle button
+          if (darkModeToggle.classList.contains('active')) {
+            // Dark mode is active: apply styles for dark mode
+            
+            
+        
+            section.style.backgroundColor = '#0d0d0d';
+            section2.style.backgroundColor = '#0d0d0d';
+            
+            word.forEach(function(sen) {
+              sen.style.color = '#fff';
+            });
+
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '#0d0d0d';
+              exit.style.color = '#fff';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '#0d0d0d';
+              title.style.color = '#fff';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '#0d0d0d';
+              content.style.color = '#fff';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '#0d0d0d';
+              body.style.color = '#fff';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '#0d0d0d';
+              part.style.color = '#fff';
+            });
+
+            fontcol.forEach(function(Color) {
+              Color.style.color = '#fff';
+            });
+           
+
+           
+            
+        
+      
+
+          } else {
+            // Dark mode is inactive: revert styles to default
+         
+            
+            close.forEach(function(exit) {
+              exit.style.backgroundColor = '#E4C59E';
+              exit.style.color = '#0d0d0d';
+            });
+
+            word.forEach(function(sen) {
+              sen.style.color = '';
+            });
+
+
+            modalTitle.forEach(function(title) {
+              title.style.backgroundColor = '';
+              title.style.color = '#0d0d0d';
+            });
+
+            modalContent.forEach(function(content) {
+              content.style.backgroundColor = '';
+              content.style.color = '#0d0d0d';
+            });
+
+            modalBody.forEach(function(body) {
+              body.style.backgroundColor = '';
+              body.style.color = '#0d0d0d';
+            });
+
+            modalPart.forEach(function(part) {
+              part.style.backgroundColor = '';
+              part.style.color = '#0d0d0d';
+            });
+
+
+            section.style.backgroundColor = '';
+            section2.style.backgroundColor = '';
+            fontcol.forEach(function(Color) {
+              Color.style.color = 'black';
+            });
+            
+
+          }
+        }
+  
+        var darkModeToggle = document.getElementById('dark-change');
+         // Event listener for dark mode toggl
+         darkModeToggle.addEventListener('click', function() {
+
+            darkModeToggle.classList.toggle('active');
+            var isDark = darkModeToggle.classList.contains('active');
+            localStorage.setItem('isDark', isDark);
+            toggleDarkMode();
+
+        });
+
+        // On page load, check local storage for dark mode preference
+        document.addEventListener('DOMContentLoaded', function() {
+            var isDark = localStorage.getItem('isDark') === 'true';
+            if (isDark) {
+                darkModeToggle.classList.add('active');
+                
+            }
+            toggleDarkMode(); 
+        });
+  
+  
+        </script>
+
+<script>
+  // Function to mark button1 as clicked in localStorage
+  function markButton1Clicked() {
+      let DataisThere2 = localStorage.getItem('button2Enabled');
+      let DataisThere3 = localStorage.getItem('button3Enabled');
+      if(!DataisThere2 && !DataisThere3){
+          localStorage.setItem('modcheck1', true);
+      }
+  }
+</script>
+
+			<script src="./js/main.js"></script>
+</body>
+</html>
